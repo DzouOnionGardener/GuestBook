@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css">
+    <style>
+      tr:first-child {
+        background-color: #747b87;
+      }
+      tr {
+        white-space: nowrap;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Guest Book</h1>
+      <div class="row">
+        <div class="col-md-4">
+          <form>
+            <div class="form-group">
+              <label for="sender">Sender</label>
+              <input required="required" type="text" class="form-control" id="sender" placeholder="Name">
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <input type="text" class="form-control" id="message">
+            </div>
+            <div class="form-group">
+              <label for="mood">Mood</label>
+              <input type="text" class="form-control" id="mood" list="words">
+              <datalist id="words">
+              </datalist>
+            </div>
+            <button disabled id="post" type="submit" class="btn btn-primary">Post</button>
+          </form>
+        </div>
+
+        <div id="messages" class="col-md-8">
+          <table id="messageTable" class="table table-bordered">
+            <thread>
+              <th>Sender</th>
+              <th>Message</th>
+              <th>Time Stamp</th>
+              <th>Mood</th>
+            </thread>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <br>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+    <script src="guestbook.js"></script>
+  </body>
+</html>
